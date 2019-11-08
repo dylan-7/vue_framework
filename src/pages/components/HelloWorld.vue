@@ -14,7 +14,7 @@ export default class HelloWorld extends Vue {
   @Prop({ type: String }) msg!: string;
 
   // 初始化数据
-  name: number[] = [1, 2, 3, 4];
+  name: number[] = [1, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4];
 
   // 声明周期钩子
   mounted() {
