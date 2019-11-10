@@ -35,6 +35,7 @@ module.exports = {
     'camelcase': 2,
     'no-new': 0,
     'indent': 'off',
+    'max-len': [2, {'code': 120}],
 
     // typescript-eslint rules
     '@typescript-eslint/indent': ['error', 2],

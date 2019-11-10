@@ -14,46 +14,8 @@ export default class HelloWorld extends Vue {
   @Prop({ type: String }) msg!: string;
 
   // 初始化数据
-  name: number[] = [
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-  ];
-  reg: RegExp = /^11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf*$/;
-  abc = '123';
+  name: number[] = [1, 2, 2, 2];
+  abc = 123;
   // 声明周期钩子
   mounted() {
     console.info(`🐞: `, this.name.fill(3, 2));
