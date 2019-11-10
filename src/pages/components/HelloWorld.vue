@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>computed name: {{ computedName }}</p>
-    <el-button @click="() => ''" style="color: red;">click</el-button>
+    <el-button @click="() => ''" style="color: red; ">click</el-button>
   </div>
 </template>
 
@@ -14,9 +14,45 @@ export default class HelloWorld extends Vue {
   @Prop({ type: String }) msg!: string;
 
   // 初始化数据
-  name: number[] = [1, 2];
-  abc =
-  '112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242';
+  name: number[] = [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ];
+  abc = '123';
   // 声明周期钩子
   mounted() {
     console.info(`🐞: `, this.name.fill(3, 2));
