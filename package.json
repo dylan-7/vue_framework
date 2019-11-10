@@ -67,8 +67,7 @@
   },
   "lint-staged": {
     "src/**/*.{ts,js,vue}": [
-      "prettier --single-quote --trailing-comma es5 --write",
-      "eslint --fix",
+      "prettier --single-quote --trailing-comma es5 --end-of-line lf --write",
       "git add"
     ],
     "yarn.lock": [
