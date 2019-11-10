@@ -23,10 +23,10 @@ module.exports = {
     'generator-star-spacing': 0,
     'no-debugger': 0,
     'no-console': 0,
-    semi: [2, 'always'],
+    'semi': [2, 'always'],
     'no-extra-semi': 2,
     'space-before-function-paren': 0,
-    eqeqeq: 0,
+    'eqeqeq': 0,
     'spaced-comment': 0,
     'no-useless-escape': 0,
     'no-tabs': 0,
@@ -34,7 +34,7 @@ module.exports = {
     'new-cap': 0,
     'camelcase': 2,
     'no-new': 0,
-    indent: 'off',
+    'indent': 'off',
 
     // typescript-eslint rules
     '@typescript-eslint/indent': ['error', 2],

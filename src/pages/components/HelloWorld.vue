@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }} </h1>
+    <h1>{{ msg }}</h1>
     <p>computed name: {{ computedName }}</p>
     <el-button>click</el-button>
   </div>
@@ -14,8 +14,57 @@ export default class HelloWorld extends Vue {
   @Prop({ type: String }) msg!: string;
 
   // 初始化数据
-  name: number[] = [1, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3, 4];
-
+  name: number[] = [
+    1,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4,
+    2,
+    3,
+    4
+  ];
+  abc = 112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242112341242;
   // 声明周期钩子
   mounted() {
     console.info(`🐞: `, this.name.fill(3, 2));
@@ -23,12 +72,12 @@ export default class HelloWorld extends Vue {
   }
 
   // 计算属性
-  get computedName () {
+  get computedName() {
     return 'computed ' + this.name;
   }
 
   // 方法
-  greet () {
+  greet() {
     console.info(`🌳: `, 'hello: ' + this.name);
   }
 }

@@ -106,7 +106,7 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /node_modules/,
         options: {
-          fix: false,
+          fix: true,
           extensions: ['.js', '.jsx', '.vue', '.ts'],
           cache: false,
           emitWarning: true,
