@@ -52,6 +52,7 @@ export default class HelloWorld extends Vue {
     2,
     2
   ];
+  reg: RegExp = /^11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf11qqqqfsfsdfsdffdfdf*$/;
   abc = '123';
   // 声明周期钩子
   mounted() {
