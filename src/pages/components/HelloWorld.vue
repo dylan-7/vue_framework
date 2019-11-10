@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>computed name: {{ computedName }}</p>
-    <el-button>click</el-button>
+    <el-button @click="() => ''">click</el-button>
   </div>
 </template>
 
