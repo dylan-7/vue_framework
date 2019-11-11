@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import ElementUI from 'element-ui';
-import './assets/styles/normalize.css';
-import './assets/styles/app.css';
+import 'normalize.css';
+import 'element-ui/lib/theme-chalk/index.css';
 import App from './app.vue';
 import router from './pages/routes/router';
 import store from '../store/store';
@@ -16,5 +16,5 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app');

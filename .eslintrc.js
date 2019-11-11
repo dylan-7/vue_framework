@@ -18,11 +18,11 @@ module.exports = {
   ],
   rules: {
     // eslint rules
-    'one-var': 0,
+    'one-var': 2,
     'arrow-parens': 0,
     'generator-star-spacing': 0,
     'no-debugger': 0,
-    'no-console': 0,
+    'no-console': 2,
     'semi': [2, 'always'],
     'no-extra-semi': 2,
     'space-before-function-paren': 0,
@@ -36,6 +36,7 @@ module.exports = {
     'no-new': 0,
     'indent': 'off',
     'max-len': [2, {'code': 120}],
+    'no-var': 2,
 
     // typescript-eslint rules
     '@typescript-eslint/indent': ['error', 2],

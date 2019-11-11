@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>computed name: {{ computedName }}</p>
-    <el-button @click="() => ''" style="color: red; ">click</el-button>
+    <el-button @click="() => ''" style="color: red;">click</el-button>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default class HelloWorld extends Vue {
   abc = 123;
   // 声明周期钩子
   mounted() {
-    console.info(`🐞: `, this.name.fill(3, 2));
+    // console.info(`🐞: `, this.name.fill(3, 2));
     this.greet();
   }
 
@@ -29,27 +29,31 @@ export default class HelloWorld extends Vue {
 
   // 方法
   greet() {
-    console.info(`🌳: `, 'hello: ', this.name);
+    // console.info(`🌳: `, 'hello: ', this.name);
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 h1 {
   display: flex;
 }
+
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
