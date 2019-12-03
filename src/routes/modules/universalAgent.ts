@@ -15,9 +15,9 @@ const route: RouteConfig = {
       meta: {
         title: '下级信息查询',
         cache: false
-      },
+      }
     }
-  ],
+  ]
 };
 
 export default route;

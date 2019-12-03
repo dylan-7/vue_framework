@@ -3,7 +3,7 @@ import router from '@/routes';
 import { UserModule } from '@/store/modules/user';
 import { PermissionModule } from '@/store/modules/permission';
 
-router.beforeEach(async(to: Route, from: Route, next: any) => {
+router.beforeEach(async (to: Route, from: Route, next: any) => {
   if (UserModule.token) {
     if (to.path === '/login') {
       next({ path: '/' });
