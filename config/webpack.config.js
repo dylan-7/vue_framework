@@ -5,9 +5,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin.js');
 const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const safePostCssParser = require('postcss-safe-parser');
-const EslintFriendlyFormatter = require('eslint-friendly-formatter');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const DefineEnvPlugin = require('define-env-plugin');
 
 const chunkHash = '[hash:5]';
 const appHtml = resolve('view/index.html');
@@ -36,12 +36,19 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          compilerOptions: {
-            preserveWhitespace: false
+        use: [{
+          loader: 'vue-loader',
+          options: {
+            compilerOptions: {
+              preserveWhitespace: false
+            }
           }
-        }
+        }, {
+          loader: 'iview-loader',
+          options: {
+            prefix: false
+          }
+        }]
       },
       {
         test: /\.ts$/,
@@ -62,7 +69,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff|eot|ttf)$/,
+        test: /\.(woff|eot|ttf|woff2)$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
@@ -104,14 +111,14 @@ module.exports = {
         enforce: 'pre',
         loader: 'eslint-loader',
         exclude: /node_modules/,
-        options: {
-          fix: true,
-          extensions: ['.js', '.jsx', '.vue', '.ts'],
-          cache: false,
-          emitWarning: true,
-          emitError: false,
-          formatter: EslintFriendlyFormatter
-        }
+        // options: {
+        //   fix: true,
+        //   extensions: ['.js', '.jsx', '.vue', '.ts'],
+        //   cache: false,
+        //   emitWarning: true,
+        //   emitError: false,
+        //   formatter:
+        // }
       }
     ]
   },
@@ -123,7 +130,9 @@ module.exports = {
     net: 'empty',
     tls: 'empty'
   },
+  stats: { children: false },
   plugins: [
+    new DefineEnvPlugin(),
     ...isEnvProduction ? [new CleanWebpackPlugin()] : [],
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin(
@@ -216,7 +225,7 @@ module.exports = {
           name: 'common',
           minChunks: 1,
           reuseExistingChunk: true,
-        },  
+        },
         vendor: {
           test: nodeModules,
           chunks: 'initial',
@@ -240,7 +249,7 @@ module.exports = {
     contentBase: [path.join(__dirname, '../')],
     hot: true,
     host: process.env.HOST || 'localhost',
-    port: process.env.PORT || '3030',
+    port: process.env.PORT || '3000',
     https: false,
     open: false,
     compress: true,
@@ -256,5 +265,11 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  stats:{
+    modules: false,
+    children: false,
+    chunks: false,
+    chunkModules: false
+  }
 };

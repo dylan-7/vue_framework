@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "sourceMap": true,
     "allowJs": true,
@@ -53,8 +53,10 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "store/store.ts",
-    "typings/*.d.ts"
+    "src/store/store.ts",
+    "typings/*.d.ts",
+    "node_modules/@types",
+    "node_modules/view-design/types"
   ],
   "exclude": [
     "node_modules",

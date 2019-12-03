@@ -1,5 +1,5 @@
-interface ResponseData<T = any> {
-   state: number;
-   message: string;
-   data: T
+import axios from 'axios'
+
+declare module 'axios' {
+  export interface AxiosResponse<T = any> extends Promise<T> {}
 }

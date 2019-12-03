@@ -1,8 +1,7 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
     <p>computed name: {{ computedName }}</p>
-    <el-button @click="() => ''" style="color: red;">click</el-button>
   </div>
 </template>
 
@@ -15,10 +14,9 @@ export default class HelloWorld extends Vue {
 
   // 初始化数据
   name: number[] = [1, 2, 2, 2];
-  abc = 123;
+
   // 声明周期钩子
   mounted() {
-    // console.info(`🐞: `, this.name.fill(3, 2));
     this.greet();
   }
 
@@ -33,28 +31,3 @@ export default class HelloWorld extends Vue {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1 {
-  display: flex;
-}
-
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>

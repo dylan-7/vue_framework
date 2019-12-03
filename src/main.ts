@@ -1,20 +1,25 @@
 import Vue from 'vue';
-import ElementUI from 'element-ui';
+import ViewUI from 'view-design';
 import 'normalize.css';
-import 'element-ui/lib/theme-chalk/index.css';
+import 'view-design/dist/styles/iview.css';
+import '@/assets/styles/app.css';
+import Axios from 'axios';
+import VueAxios from 'vue-axios';
 import App from './app.vue';
-import router from './pages/routes/router';
-import store from '../store/store';
-// import i18n from '@/i18n';
+import store from './store/modules/store';
+import router from '@/routes';
+import i18n from '@/lang';
+import '@/permission';
 
-Vue.use(
-  ElementUI
-  // { i18n: (key: string, values?: any[]) => i18n.t(key, values) }
-);
+Vue.use(ViewUI, VueAxios, Axios, {
+  i18n: (key: string, value: string) => i18n.t(key, value)
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
-  render: h => h(App),
+  i18n,
+  render: h => h(App)
 }).$mount('#app');

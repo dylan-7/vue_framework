@@ -8,30 +8,33 @@ Vue
 - vue-router
 - vuex
 - axios
-- element-ui
+- view-design
 
 ### Directory Layout
 
 ```bash
 ├── public/                        # 编译输出
-├── migrations/                    # Database schema migration
+├── mock/                          # 模拟数据
 ├── node_modules/                  # 项目依赖
-├── view/                          # 静态文件，如favicon.ico等.
-├── store/                         # 状态管理
+├── view/                          # 静态文件
+│   ├── index.html                 # html模板
+│   ├── favicon.ico                # favicon图标
+├── store/                         # vuex store
 ├── typings/                       # ts类型
 ├── utils/                         # 工具方法
 ├── src/                           # 程序代码
-│   ├── assets/                    # 资源
+│   ├── lang/                      # 国际化
+│   ├── routes/                      # 路由
+│   ├── assets/                    # 静态资源
 │   │    ├── fonts/                # 字体
 │   │    ├── images/               # 图片
 │   │    ├── sound/                # 音频
-│   │    ├── styles/               # 公用样式
+│   │    ├── styles/               # 全局样式
 │   ├── pages/                     # 页面
-│   │    ├── component/            # 公用组件
-│   │    ├── routes/               # 路由
+│   │    ├── component/            # 全局组件
 │   │    ├── home/                 # 首页
 │   │    └──  ...                  ...
-│   ├── app.vue                    # 程序首页
+│   ├── app.vue                    # 入口页面
 │   ├── main.ts                    # 入口文件
 └── package.json                   # 包管理文件
 ```
@@ -40,6 +43,7 @@ Vue
 - Node.js >10
 - Yarn
 - VS Code 安装Vetur
+- VS Code 安装EditorConfig for VS Code
 
 ### Getting Started
 
@@ -48,7 +52,7 @@ $ yarn                              # 安装依赖
 $ yarn serve                        # 编译APP并启动本地服务
 ```
 
-打开 [http://localhost:3000/](http://localhost:3000/) 查看界面<br>
+打开 [http://localhost:3000/](http://localhost:3333/) 访问网站<br>
 
 ### git 操作规范
 
