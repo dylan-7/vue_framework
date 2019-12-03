@@ -6,7 +6,7 @@
 
 <style lang='scss'>
 #app {
-  height:inherit;
+  height: inherit;
 }
 </style>
 
