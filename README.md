@@ -52,7 +52,7 @@ $ yarn                              # 安装依赖
 $ yarn serve                        # 编译APP并启动本地服务
 ```
 
-打开 [http://localhost:3000/](http://localhost:3333/) 访问网站<br>
+打开 [http://localhost:3000/](http://localhost:3000/) 访问网站<br>
 
 ### git 操作规范
 

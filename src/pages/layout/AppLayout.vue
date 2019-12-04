@@ -15,7 +15,7 @@
   </Layout>
 </template>
 
-<style lang='scss' scoped>
+<style lang='styl' scoped>
 .layout {
   height: inherit;
 

@@ -1,5 +1,5 @@
 import { RouteConfig } from 'vue-router';
-import AppLayout from '@/pages/layout/AppLayout';
+import AppLayout from '@/pages/layout/AppLayout.vue';
 
 const route: RouteConfig = {
   path: '/gmManagement',

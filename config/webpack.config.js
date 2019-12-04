@@ -77,7 +77,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(sa|sc)ss$/,
+        test: /\.(styl|css)$/,
         resourceQuery: /\?vue/,
         use: [
           {
@@ -91,7 +91,7 @@ module.exports = {
             loader: 'css-loader'
           },
           {
-            loader: 'sass-loader'
+            loader: 'stylus-loader'
           }
         ]
       },

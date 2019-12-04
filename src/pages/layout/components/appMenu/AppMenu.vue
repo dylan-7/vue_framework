@@ -25,7 +25,7 @@
   </Menu>
 </template>
 
-<style lang='scss' scoped>
+<style lang='styl' scoped>
 .menu {
   height: inherit;
 }

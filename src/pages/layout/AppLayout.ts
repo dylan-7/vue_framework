@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { AppFooter, AppMain, AppMenu, AppHeader } from './components/index';
+import { AppFooter, AppMain, AppMenu, AppHeader } from './components';
 
 /**
  *

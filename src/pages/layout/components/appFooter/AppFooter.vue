@@ -6,7 +6,7 @@
   </Footer>
 </template>
 
-<style lang='scss' scoped>
+<style lang='styl' scoped>
 .footer {
   text-align: center;
   padding: 10px 50px;

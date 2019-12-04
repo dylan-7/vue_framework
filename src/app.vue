@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang='scss'>
+<style lang='styl'>
 #app {
   height: inherit;
 }

@@ -21,7 +21,7 @@
   </Header>
 </template>
 
-<style lang='scss' scoped>
+<style lang='styl' scoped>
 .ivu-layout-header {
   padding: 0 20px;
 }
